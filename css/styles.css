@@ -1,39 +1,103 @@
+/* Paleta de Cores e Variáveis */
+:root {
+    --primary-color: #2c3e50;    /* Azul Petróleo Escuro */
+    --secondary-color: #a67c52;  /* Bronze/Dourado Sóbrio */
+    --accent-color: #e67e22;     /* Laranja Suave para Detalhes */
+    --bg-light: #fdfaf6;         /* Bege Papel Cremoso */
+    --text-dark: #34495e;
+}
+
+/* Base */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3, .navbar-brand {
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.com');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
+/* Navbar Personalizada */
+.navbar {
+    background-color: var(--primary-color) !important;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .navbar-brand {
-    font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: var(--secondary-color) !important;
 }
 
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
+                url('../images/bibliaaberta.jpg');
+      background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: #fff;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+/* Cards de Artigos */
 .card {
     border: none;
-    transition: transform 0.3s;
+    background-color: #fff;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    border-bottom: 3px solid var(--secondary-color);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
+.card-title {
+    color: var(--primary-color);
+}
+
+.badge {
+    background-color: var(--secondary-color) !important;
+    font-weight: 400;
+}
+
+/* Botões e Links */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-link {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Estilo do Artigo (artigo.html) */
+.article-content {
+    background: #fff;
+    border-top: 4px solid var(--secondary-color);
+}
+
+blockquote {
+    border-left: 4px solid var(--secondary-color);
+    font-style: italic;
+    color: var(--primary-color);
+    background: #f9f4ee;
+    padding: 20px;
+}
+
+/* Rodapé */
 footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 0;
+    background-color: var(--primary-color);
+    color: #ecf0f1;
+    border-top: 10px solid #243342;
 }
